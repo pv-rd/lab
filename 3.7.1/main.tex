@@ -77,7 +77,7 @@
 	с граничными условиями $H(0) = H_0$, $H(h) = H_1$, где $H_0$ -- поле на внешней границе цилиндра, равное полю внутри соленоида в отсутствие экрана. Решение этого уравнения имеет вид
 	
 	\begin{equation}
-		H(x)  = Ae^{\alpha x} + B^{-\alpha x} 
+		H(x)  = Ae^{\alpha x} + Be^{-\alpha x} 
 	\end{equation}
 	
 	где подстановкой находим $\alpha = \sqrt{i\omega \sigma \mu \mu_0}$. Введём глубину скин-слоя 
@@ -114,6 +114,34 @@
 		\label{eq:xi}
 	\end{equation}
 	где калибровочная константа $c$ определяется из условия $|H_1|/|H_0| \to 1$ при $\nu \to 0$.
+	
+	Скин-эффект влияет на индуктивность соленоида с экраном. Магнитный поток через катушку складывается из потока во внешней области $\Phi_{\text{out}} = H_0 S_0$ и потока за экраном $\Phi_{\text{in}} = H_1 S_1$:
+	
+	\begin{equation}
+		\Phi = \Phi_{\text{out}} + \Phi_{\text{in}} = H_0 S_0 + H_1 S_1 = LI.
+		\label{eq:flux}
+	\end{equation}
+	
+	При $H_1 \to 0$ (высокие частоты) индуктивность минимальна и не зависит от частоты: $L_{\min} = \Phi_{\text{out}}/I$. При $H_1 = H_0$ (низкие частоты) поток максимален, откуда
+	
+	\begin{equation}
+		\frac{S_1}{S_0} = \frac{L_{\max} - L_{\min}}{L_{\min}}.
+		\label{eq:S_ratio}
+	\end{equation}
+	
+	Вводя коэффициент ослабления поля $n = (|H_0|/|H_1|)\cos^{-1}\psi$, получаем связь индуктивности с $n$:
+	
+	\begin{equation}
+		L = L_{\min} + \frac{L_{\max} - L_{\min}}{n}.
+		\label{eq:L_n}
+	\end{equation}
+	
+	Подставляя сюда выражения для $|H_1|/|H_0|$ и $\tg\psi$ в области малых частот, имеем
+	
+	\begin{equation}
+		\frac{L_{\max} - L}{L - L_{\min}} = (\pi a h \mu_0 \sigma \nu)^2,
+		\label{eq:L_freq}
+	\end{equation}
 	
 	
 	
