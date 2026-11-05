@@ -108,12 +108,6 @@
 		H_1 \approx \frac{4 H_0 e^{-\alpha h}}{\alpha a}; \ \ \ \frac{|H_1|}{|H_0|} = \frac{2\sqrt{2} \delta}{a} e^{-h/\delta}; \ \ \ \tg \psi = \frac{\pi}{4} + \frac{h}{\delta}
 	\end{equation}
 	
-	В работе отношение амплитуд магнитных полей находится через измеряемые напряжение на внутренней катушке $U \propto \nu |H_1|$ и ток в соленоиде $I \propto |H_0|$:
-	\begin{equation}
-		\frac{|H_1|}{|H_0|} = c \cdot \frac{U}{\nu I} = c\xi,
-		\label{eq:xi}
-	\end{equation}
-	где калибровочная константа $c$ определяется из условия $|H_1|/|H_0| \to 1$ при $\nu \to 0$.
 	
 	Скин-эффект влияет на индуктивность соленоида с экраном. Магнитный поток через катушку складывается из потока во внешней области $\Phi_{\text{out}} = H_0 S_0$ и потока за экраном $\Phi_{\text{in}} = H_1 S_1$:
 	
@@ -151,7 +145,7 @@
 	
 	\begin{figure}[h!]
 		\centering
-		\includegraphics[width=0.7\linewidth]{setup}
+		\includegraphics[width=0.8\linewidth]{setup}
 		\caption{Схема установки}
 		\label{fig:setup}
 	\end{figure}
@@ -184,7 +178,7 @@
 		\xi = \frac{U}{\nu I} = \xi_0 \frac{|H_1|}{|H_0|}
 	\end{equation}
 	
-	Построим график в координатах $1/\xi^2(\nu^2)$ (см. рис. 3). Аппроксимируем линейной зависимостью. Экстраполируя к $\nu = 0$ находим $1/\xi_0 = (69,13 \pm 0,04)$. По угловому коэффициенту находим 
+	Построим график в координатах $1/\xi^2(\nu^2)$ (см. рис. 3). Аппроксимируем линейной зависимостью. Экстраполируя к $\nu = 0$ находим $C = 1/\xi_0 = (69,13 \pm 0,04)$. По угловому коэффициенту находим 
 	\[
 	\sigma_1 = (4,452 \pm 0,010)\cdot 10^7\text{ См/м}
 	\]
@@ -223,7 +217,10 @@
 	
 	В диапазоне частот $\nu = 125\text{--}410\text{ Гц}$  измерялись параметры сдвига сигналов $x$ и $x_0$ (таблица \ref{tab:phase_low}). С учетом сдвига фазы на $\pi/2$ на измерительной катушке тангенс сдвига фазы поля определяется как $\tg\psi = \frac{x}{\sqrt{x_0^2 - x^2}}$.
 	
-	
+	По коэффициенту наклона прямой $k = \pi a h \sigma \mu_0 = (0,00585 \pm 0,00018)\text{ Гц}^{-1}$ находим проводимость:
+	\[
+	\sigma_2 = \frac{k}{\pi a h \mu_0} = (4,39 \pm 0,14)\cdot 10^7\text{ См/м}.
+	\]
 	
 	\begin{figure}[H]
 		\centering
@@ -265,14 +262,11 @@
 				%\addlegendentry{Аппроксимация: $\tan\psi = 0.00585\nu$}
 			\end{axis}
 		\end{tikzpicture}
-		\caption{График зависимости $\tan\psi(\nu)$ в низкочастотной области}
+		\caption{График зависимости $\tg\psi(\nu)$ в низкочастотной области}
 		\label{fig:phase_low}
 	\end{figure}
 	
-	По коэффициенту наклона прямой $k = \pi a h \sigma \mu_0 = (0,00585 \pm 0,00018)\text{ Гц}^{-1}$ находим проводимость:
-	\[
-	\sigma_2 = \frac{k}{\pi a h \mu_0} = (4,39 \pm 0,14)\cdot 10^7\text{ См/м}.
-	\]
+	
 	
 	\subsection{Измерение проводимости через разность фаз в высокочастотном диапазоне}
 	
@@ -325,7 +319,7 @@
 		\centering
 		\begin{tikzpicture}
 			\begin{axis}[
-				width=6.8cm, height=6cm,
+				width=8cm, height=7cm,
 				xlabel={$\nu$, Гц},
 				ylabel={$L$, мГн},
 				grid=both,
@@ -345,7 +339,7 @@
 		\hfill
 		\begin{tikzpicture}
 			\begin{axis}[
-				width=8.2cm, height=6cm,
+				width=9cm, height=7cm,
 				xlabel={$\nu^2$, $\text{кГц}^2$},
 				ylabel={$(L_{\max}-L)/(L-L_{\min})$},
 				grid=both,
@@ -420,6 +414,8 @@
 		\caption{Отношение амплитуд магнитных полей $|H_1|/|H_0|(\nu)$ во всем диапазоне частот}
 		\label{fig:all_range}
 	\end{figure}
+	
+	\newpage
 		
 \section{Выводы}
 
